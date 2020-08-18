@@ -1,44 +1,46 @@
 teminal based sudoku game.
 supports the following commands:-
   1.  solve [X]:-
-         Starts a puzzle in Solve mode, loaded from a file with the name "X", where X
-         Includes a full or relative path to the file.
+          Starts a puzzle in Solve mode, loaded from a file with the name "X", where X
+          Includes a full or relative path to the file.
   2.  edit [X]:-
-         Starts a puzzle in Edit mode, loaded from a file with the name "X", where X
-         Includes a full or relative path to the file, if no X is supplied then the 
-         Program will start an empty 9X9 puzzle.
+          Starts a puzzle in Edit mode, loaded from a file with the name "X", where X
+          Includes a full or relative path to the file, if no X is supplied then the 
+          Program will start an empty 9X9 puzzle.
   3.  mark_errors [X]:-
-         Sets the "mark errors" setting to X, when X=1 the program displays your errors.
-         When X=0 the program doesn't.
+          Sets the "mark errors" setting to X, when X=1 the program displays your errors.
+          When X=0 the program doesn't.
   4.  print_board:-
-         Prints the board to the terminal.
+          Prints the board to the terminal.
   5.  set [X][Y][Z]:-
-         Sets the values of cell <X,Y> to Z (X is the column, Y is the row).
+          Sets the values of cell <X,Y> to Z (X is the column, Y is the row).
   6.  validate:-
           Validate the current board using ILP, ensuring that it is solvable or not.
   7.  guess [X]:-
-          Guesses a solution to the current board using LP with threshold X, X is used as the
-          Minimum probability for a cell to be set to a certain value.
+          Guesses a solution to the current board using LP with threshold X,
+          X is used as the minimum probability for a cell to be set
+          To a certain value.
   8.  generate [X][Y]:-
           Generates a puzzle by randomly filling X empty cells with legal values,
-          running ILP to solve the board, and then clearing all but Y random cell.
+          Running ILP to solve the board, and then clearing all but Y random cell.
   9.  undo :-
-          Undo a previous move done by the user
+          Undo a previous move done by the user.
   10. redo :-
           Redo a move previously undone by the user.
   11. save [X]:-
-          Saves the current game board to the specified file, where X includes a full or
-          Relative path to the file.
+          Saves the current game board to the specified file, where X includes a
+          Full or Relative path to the file.
   12. hint [X][Y]:-
           Give a hint to the user by showing the solution of a single cell X,Y.
   13. guess_hint [X][Y]:-
           Show a guess to the user for the cell X Y, the guess is done by using LP.
   14. num_solutions:-
           Print the number of solutions for the current board, we do that by running 
-          an extensive backtracking algorithm to find all possible solutions.
+          An extensive backtracking algorithm to find all possible solutions.
   15. autofill:-
-          automatically fill "obvious" values - cells which can only have a single possible legal value.
+          Automatically fill "obvious" values - cells which can only have a single
+          Possible legal value.
   16. reset:-
-          undo all moves, reverting the board to its original loaded state.
+          Undo all moves, reverting the board to its original loaded state.
   17. exit:-
-          terminate the program.
+          Terminate the program.
